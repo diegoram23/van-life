@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 import Home from './Home'
 import About from './About'
 import Vans from "./Vans";
+import VanDetail from './VanDetail'
 import "../server"
 
 export default function App() {
@@ -19,6 +20,7 @@ export default function App() {
         <Route path="/van-life/" element={<Home />} />
         <Route path="/van-life/about" element={<About />} />
         <Route path="/van-life/vans" element={<Vans />}/>
+        <Route path='/van-life/vans/:id' element={<VanDetail />}/>
       </Routes>
     </BrowserRouter>
   )

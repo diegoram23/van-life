@@ -5,7 +5,6 @@ export default function Vans() {
     const [vans, setVans] = React.useState([])
 
     React.useEffect(() => {
-        console.log('effect ran')
         fetch("/api/vans")
             .then(res => res.json())
             .then(data => setVans(data.vans))
